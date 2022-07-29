@@ -12,7 +12,7 @@ function App(){
 	// 		default: throw new Error("Unknown page")
 	// 	}
 	// }
-	// setCurrentPage('About Me')
+	setCurrentPage('About Me')
 
 	useEffect(()=>{
 		try{
@@ -21,7 +21,7 @@ function App(){
 		catch(e){
 			console.log(e)
 		}
-	})
+	}, [currentPage])
 
 	// try {
 	// 	return getData(currentPage)
