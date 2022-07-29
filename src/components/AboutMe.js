@@ -1,6 +1,4 @@
 import React from "react";
-import Navigation from "./Navigation";
-import Footer from "./Footer";
 import avatar from '../images/avatar.jpg'
 
 const styles ={
@@ -10,10 +8,8 @@ const styles ={
 	}
 }
 
-function AboutMe(props){
+function AboutMe(){
 	return(
-		<div>
-			<Navigation currentPage={props.currentPage} setCurrentPage={props.setCurrentPage}/>
 			<section className="container">
 				<div id="avatar">
                     <a href="./index.html" title="Chi Hieu Nguyen">
@@ -31,8 +27,6 @@ function AboutMe(props){
                     <li>MongoDB</li>
                 </ul>
 			</section>
-			<Footer />
-		</div>
 	)
 }
 
