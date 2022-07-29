@@ -1,35 +1,38 @@
 import React, {useEffect, useState} from "react";
-import Navigation from "./components/Navigation";	
-
+import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
+import Portfolio from "./components/Portfolio";
+import Resume from "./components/Resume";
 function App(){
-	let [currentPage, setCurrentPage] = useState('')
-	// function getData(state){
-	// 	switch (state){
-	// 		case "About Me": return <AboutMe setPage={setCurrentPage} />; break;
-	// 		case "Portfolio": return <Portfolio setPage={setCurrentPage} />; break;
-	// 		case "Contact": return <Contact setPage={setCurrentPage} />; break;
-	// 		case "Resume": return <Resume setPage={setCurrentPage} />; break;
-	// 		default: throw new Error("Unknown page")
-	// 	}
-	// }
-	setCurrentPage('About Me')
+	let [currentPage, setCurrentPage] = useState('About Me');
+
 
 	useEffect(()=>{
 		try{
-			console.log(currentPage)
+			switch (currentPage){
+				case "About Me": return <AboutMe currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+				case "Portfolio": return <Portfolio currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+				case "Contact": return <Contact currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+				case "Resume": return <Resume currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+				default: throw new Error("Unknown page"); break;
+			}
 		}
 		catch(e){
 			console.log(e)
 		}
-	}, [currentPage])
+	})
 
-	// try {
-	// 	return getData(currentPage)
-	// } catch (error) {
-	// 	console.log(error)
-	// }
-
-	return <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+	try {
+		switch (currentPage){
+			case "About Me": return <AboutMe currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+			case "Portfolio": return <Portfolio currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+			case "Contact": return <Contact currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+			case "Resume": return <Resume currentPage={currentPage} setCurrentPage={setCurrentPage} />; break;
+			default: throw new Error("Unknown page"); break;
+		}
+	} catch (error) {
+		console.log(error)
+	}
 }
 
 export default App
