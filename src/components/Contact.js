@@ -11,7 +11,7 @@ function Contact(){
 	}
 
 	function emailValidation(input){
-		return String(input).toLowerCase().match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
+		return String(input).toLowerCase().match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$/)
 	}
 	
 	function handleSubmit(e) {
@@ -33,8 +33,10 @@ function Contact(){
 				}
 			}
 		}
+		// remove notification if data is entered correctly
 		errorMsg.innerHTML=''
-		
+		// TODO:add method to send email to personal email below
+
 	}
 	const styles ={
 		textarea:{
