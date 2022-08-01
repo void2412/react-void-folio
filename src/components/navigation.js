@@ -7,15 +7,15 @@ function Navigation(props){
 		props.setCurrentPage(val)
 	}
 	function handleHighlight(title){
-		if(title == props.currentPage){
+		if(title === props.currentPage){
 			return true
 		}
 		return false
 	}
 	return(
-		<nav className= "navbar navbar-expand-lg bg-light">
+		<nav className= "navbar navbar-expand-lg bg-light mb-3">
 			<div className="container-fluid">
-				<p className="navbar-brand">Chi Hieu Nguyen</p>
+				<a href="/" className="navbar-brand">Chi Hieu Nguyen</a>
 
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       				<span className="navbar-toggler-icon"></span>
