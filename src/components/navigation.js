@@ -6,6 +6,12 @@ function Navigation(props){
 		let val = e.target.innerHTML;
 		props.setCurrentPage(val)
 	}
+	function handleHighlight(title){
+		if(title == props.currentPage){
+			return true
+		}
+		return false
+	}
 	return(
 		<nav className= "navbar navbar-expand-lg bg-light">
 			<div className="container-fluid">
@@ -16,12 +22,27 @@ function Navigation(props){
     			</button>
 
 				<div className="collapse navbar-collapse" id="navbarNav">
-					<ul className="navbar-nav ms-auto">
-						<li className="nav-item nav-link hover-cursor d-block" onClick={handleClick}>About Me</li>
-						<li className="nav-item nav-link hover-cursor d-block" onClick={handleClick}>Portfolio</li>
-						<li className="nav-item nav-link hover-cursor d-block" onClick={handleClick}>Contact</li>
-						<li className="nav-item nav-link hover-cursor d-block" onClick={handleClick}>Resume</li>
-					</ul>
+					<div className="navbar-nav ms-auto btn-group">
+						{handleHighlight("About Me") ? 
+						(<button className="nav-item nav-link hover-cursor btn btn-success" onClick={handleClick}>About Me</button>
+						) : 
+						(<button className="nav-item nav-link hover-cursor btn" onClick={handleClick}>About Me</button>)}
+
+						{handleHighlight("Portfolio") ? 
+						(<button className="nav-item nav-link hover-cursor btn btn-success" onClick={handleClick}>Portfolio</button>
+						) : 
+						(<button className="nav-item nav-link hover-cursor btn" onClick={handleClick}>Portfolio</button>)}
+						
+						{handleHighlight("Contact") ? 
+						(<button className="nav-item nav-link hover-cursor btn btn-success" onClick={handleClick}>Contact</button>
+						) : 
+						(<button className="nav-item nav-link hover-cursor btn" onClick={handleClick}>Contact</button>)}
+
+						{handleHighlight("Resume") ? 
+						(<button className="nav-item nav-link hover-cursor btn btn-success" onClick={handleClick}>Resume</button>
+						) : 
+						(<button className="nav-item nav-link hover-cursor btn" onClick={handleClick}>Resume</button>)}
+					</div>
 				</div>
 				
 			</div>

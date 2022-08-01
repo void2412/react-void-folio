@@ -1,6 +1,7 @@
 import React from "react"
 
-function Project(){
+function Project(props){
+	// image, title, link to deployed, link to github
 	return(<></>)
 }
 
