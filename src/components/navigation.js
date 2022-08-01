@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../css/nav.css"
 function Navigation(props){
 
 	function handleClick(e){
@@ -13,7 +13,7 @@ function Navigation(props){
 		return false
 	}
 	return(
-		<nav className= "navbar navbar-expand-lg bg-light mb-3">
+		<nav className= "navbar navbar-expand-lg mb-3" id="navbar">
 			<div className="container-fluid">
 				<a href="/" className="navbar-brand">Chi Hieu Nguyen</a>
 
