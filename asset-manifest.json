@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-void-folio/static/css/main.f699c2e8.css",
+    "main.js": "/react-void-folio/static/js/main.08b792d6.js",
+    "static/media/techBlog.gif": "/react-void-folio/static/media/techBlog.d573fe724d9dda141c4d.gif",
+    "static/media/avatar.jpg": "/react-void-folio/static/media/avatar.1462e852a6149b23da67.jpg",
+    "static/media/noteTaker.png": "/react-void-folio/static/media/noteTaker.b270cdf4b76dc70dc9a0.png",
+    "static/media/TaskPlanner.png": "/react-void-folio/static/media/TaskPlanner.546f5c1128d594dfddc6.png",
+    "static/media/resume.pdf": "/react-void-folio/static/media/resume.475cd57002742b25d8b0.pdf",
+    "static/media/passwordGen.gif": "/react-void-folio/static/media/passwordGen.0bfa464501b26207759e.gif",
+    "static/media/myButcher.jpg": "/react-void-folio/static/media/myButcher.e47699bdea732c7003b4.jpg",
+    "static/media/Text Editor.png": "/react-void-folio/static/media/Text Editor.50bc6d47bb17462fd1ac.png",
+    "index.html": "/react-void-folio/index.html",
+    "main.f699c2e8.css.map": "/react-void-folio/static/css/main.f699c2e8.css.map",
+    "main.08b792d6.js.map": "/react-void-folio/static/js/main.08b792d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f699c2e8.css",
+    "static/js/main.08b792d6.js"
+  ]
+}
